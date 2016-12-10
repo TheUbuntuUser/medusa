@@ -203,6 +203,12 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
 	  For more info, take a look at the cpu frequency driver help section.
 	  Performance governor will be the fallback governor.
 
+config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
+	bool "BioShock"
+	select CPU_FREQ_GOV_BIOSHOCK
+	help
+	  Default governor of BioShock kernel
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -428,6 +434,12 @@ config CPU_FREQ_GOV_LIONHEART
         help
            lionheart' - a "smart" optimized governor!
            If in doubt, say N.
+
+config CPU_FREQ_GOV_BIOSHOCK
+	tristate "'bioshock' cpufreq bioshock"
+	depends on CPU_FREQ
+	help
+	  'bioshock' - More aggressive version of conservative
 
 config CPU_BOOST
 	tristate "Event base short term CPU freq boost"
