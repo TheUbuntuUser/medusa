@@ -203,6 +203,11 @@ config CPU_FREQ_DEFAULT_GOV_INTERACTIVEX
 	  For more info, take a look at the cpu frequency driver help section.
 	  Performance governor will be the fallback governor.
 
+config CPU_FREQ_DEFAULT_GOV_DESPAIR
+	bool "despair"
+	select CPU_FREQ_GOV_DESPAIR
+	help
+
 config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
 	bool "BioShock"
 	select CPU_FREQ_GOV_BIOSHOCK
@@ -434,6 +439,10 @@ config CPU_FREQ_GOV_LIONHEART
         help
            lionheart' - a "smart" optimized governor!
            If in doubt, say N.
+
+config CPU_FREQ_GOV_DESPAIR
+	tristate "'despair' cpufreq governor"
+	depends on CPU_FREQ
 
 config CPU_FREQ_GOV_BIOSHOCK
 	tristate "'bioshock' cpufreq bioshock"
