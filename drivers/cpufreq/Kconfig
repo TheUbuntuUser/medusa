@@ -216,6 +216,14 @@ config CPU_FREQ_DEFAULT_GOV_BIOSHOCK
 
 endchoice
 
+config CPU_FREQ_DEFAULT_GOV_ELEMENTALX
+	bool "elementalx"
+	select CPU_FREQ_GOV_ELEMENTALX
+	select CPU_FREQ_GOV_PERFORMANCE
+	help
+	  Use the CPUFreq governor 'elementalx' as default.
+
+
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
 	help
@@ -286,6 +294,41 @@ config CPU_FREQ_GOV_INTERACTIVE
 
 	  For details, take a look at linux/Documentation/cpu-freq.
 
+	  If in doubt, say N.
+
+config CPU_FREQ_GOV_IMPULSE
+	tristate "'interactive' cpufreq policy governor"
+	help
+	  'impulse' - This driver adds a dynamic cpufreq policy governor
+	  designed for latency-sensitive workloads.
+
+	  If in doubt, say N.
+
+config CPU_FREQ_GOV_ELEMENTALX
+	tristate "'elementalx' cpufreq policy governor"
+	select CPU_FREQ_TABLE
+	help
+	  'elementalx' - This driver adds a dynamic cpufreq policy governor.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_elementalx.
+
+	  For details, take a look at linux/Documentation/cpu-freq.
+
+	  If in doubt, say N.
+
+
+config CPU_FREQ_GOV_ELEMENTALX
+	tristate "'elementalx' cpufreq policy governor"
+	select CPU_FREQ_TABLE
+	help
+	  'elementalx' - 
+	   This driver adds a dynamic cpufreq policy governor.
+	   To compile this driver as a module, choose M here: 
+	   the module will be called cpufreq_elementalx. For 
+	   details, take a look at 
+	   linux/Documentation/cpu-freq.
+	   
 	  If in doubt, say N.
 
 config CPU_FREQ_GOV_CONSERVATIVE
@@ -439,7 +482,6 @@ config CPU_FREQ_GOV_LIONHEART
         help
            lionheart' - a "smart" optimized governor!
            If in doubt, say N.
-
 config CPU_FREQ_GOV_DESPAIR
 	tristate "'despair' cpufreq governor"
 	depends on CPU_FREQ
