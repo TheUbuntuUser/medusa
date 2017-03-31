@@ -1,5 +1,7 @@
-
-obj-y += exfat_core.o exfat_fs.o
+# Never compile as an external module
+#ifneq ($(KERNELRELEASE),)
+ifneq (1,)
+# call from kernel build system
 
 exfat_fs-y	:= exfat_super.o
 
