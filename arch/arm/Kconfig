@@ -2314,8 +2314,6 @@ source "lib/Kconfig"
 
 source "arch/arm/kvm/Kconfig"
 
-source "arch/arm/Kconfig.sec"
-
 config ALUCARD_CONTROL
 	bool "Alucard"
 	depends on HOTPLUG_CPU && SMP
