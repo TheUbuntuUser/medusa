@@ -4668,3 +4668,4 @@ CONFIG_QMI_ENCDEC=y
 #
 # MedusaKernel Spesific
 #
+CONFIG_BOEFFLA_WL_BLOCKER=y
