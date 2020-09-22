@@ -152,8 +152,15 @@ struct device_clnt_data {
 	void                         *usr_data;
 };
 
-#if defined (CONFIG_THERMAL_MONITOR) || defined (CONFIG_INTELLI_THERMAL)
+#ifdef CONFIG_USER_RESET_DEBUG_TEST
+extern void force_thermal_reset(void);
+#else
+static inline void force_thermal_reset(void)
+{
+}
+#endif
 
+#ifdef CONFIG_THERMAL_MONITOR
 extern int msm_thermal_init(struct msm_thermal_data *pdata);
 extern int msm_thermal_device_init(void);
 extern int msm_thermal_set_frequency(uint32_t cpu, uint32_t freq,
