@@ -536,6 +536,7 @@
 		qcom,disable-psm;
 		qcom,disable-ocr;
 		qcom,disable-vdd-rstr;
+		qcom,disable-core-control;
 		qcom,vdd-restriction-temp = <5>;
 		qcom,vdd-restriction-temp-hysteresis = <10>;
 		vdd-dig-supply = <&pm8917_s2_floor_level>;
