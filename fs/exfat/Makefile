@@ -1,3 +1,4 @@
+obj-y += exfat_core.o exfat_fs.o
 # Never compile as an external module
 #ifneq ($(KERNELRELEASE),)
 ifneq (1,)
@@ -15,3 +16,4 @@ all:
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
+endif
