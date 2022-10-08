@@ -1,0 +1,8 @@
+kernel/drivers/leds/led-class.ko
+kernel/drivers/leds/leds-qpnp.ko
+kernel/drivers/leds/leds-qpnp-flash.ko
+kernel/drivers/leds/leds-qpnp-wled.ko
+kernel/drivers/leds/leds-ktd2026.ko
+kernel/drivers/leds/leds-ktd2692.ko
+kernel/drivers/leds/smfled.ko
+kernel/drivers/leds/sm5703_fled.ko

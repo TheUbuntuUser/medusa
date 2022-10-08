@@ -1,0 +1,4 @@
+kernel/drivers/pinctrl/qcom/pinctrl-msm8952.ko
+kernel/drivers/pinctrl/qcom/pinctrl-msm8917.ko
+kernel/drivers/pinctrl/qcom/pinctrl-msm8937.ko
+kernel/drivers/pinctrl/qcom/pinctrl-msm8953.ko
