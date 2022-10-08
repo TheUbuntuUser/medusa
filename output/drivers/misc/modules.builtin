@@ -1,5 +1,0 @@
-kernel/drivers/misc/qseecom.ko
-kernel/drivers/misc/hdcp.ko
-kernel/drivers/misc/uid_cputime.ko
-kernel/drivers/misc/tzic64.ko
-kernel/drivers/misc/dmverity_query.ko
